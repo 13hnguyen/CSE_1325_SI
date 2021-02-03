@@ -14,7 +14,7 @@ class Elevator
 	   }
 	   friend std::ostream& operator<<(std::ostream& m, Elevator& elivator)
 	   {
-	   	m << elivator._level ;
+	   	m << elivator._level << " " << elivator._population;
 	   	return m;
 	   }
 	   elivator operator+(Elivator& ad)
