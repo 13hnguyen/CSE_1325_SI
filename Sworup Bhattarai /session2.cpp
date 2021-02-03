@@ -19,19 +19,20 @@ class Elevator
 	      return _level;
 	   }
 };
-	   std::ostream& operator<<(std::ostream& m, Elevator& elivator)
+	   std::ostream& operator<<(std::ostream& m, Elevator& elevator)
 	   {
 	   	m << elevator._level << " " << elevator._population;
 	   	return m;
 	   }
-	   Elevator operator+(Elevator& ad)
+	   Elevator operator+(const Elevator& ad)
 	   {
-	   	
+	   	return ad._level +  *this._level;
 	   }
 	   
 int main()
 {
    Elevator newElev{2};
    Elevator oldElev{3};
-   std::cout << (newElev+oldElev) << std::endl;
+   std::cout << (newElev+oldElev) << std::endl;  // newElev.operator(oldElev)
+   
 }
