@@ -12,11 +12,8 @@ class Elevator
 	   {
 	      _level = lev;
 	   }
-	   friend std::ostream& operator<<(std::ostream& m, Elevator& elivator)
+	   friend std::ostream& operator<<(std::ostream& m, Elevator& elevator)
 	   Elevator operator+(Elevator& ad)
-	   {
-	   	
-	   }
 	   int get_level()
 	   {
 	      return _level;
@@ -26,6 +23,10 @@ class Elevator
 	   {
 	   	m << elevator._level << " " << elevator._population;
 	   	return m;
+	   }
+	   Elevator operator+(Elevator& ad)
+	   {
+	   	
 	   }
 	   
 int main()
